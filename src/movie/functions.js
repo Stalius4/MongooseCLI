@@ -29,15 +29,11 @@ exports.updateMovie = async ( yargsObj) => {
     }
 }
 
-exports.deleteMovie = async (movieObj) =>{
-    await Movie.deleteOne({ title: movieObj.title });
-}
-
-exports.updateMovie = async ( movieObj) => {
+exports.deleteMovie = async (movieObj) => {
     try {
-      const response =  await Movie.deleteOne({ title: movieObj});
-        console.log(response)
+        const response = await Movie.deleteOne(movieObj);
+        console.log(response.deletedCount > 0);
     } catch (error) {
         console.log(error)
     }
-}
+};
