@@ -22,18 +22,14 @@ exports.addTv = async (movieObj) => {
 exports.updateTv = async ( yargsObj) => {
     try {
         const filter = { title: yargsObj.title };
-        const updateYear = { year: yargsObj.year };
-        const updateGenre = { genre: yargsObj.genre };
-        const updateActor = { actor: yargsObj.actor };
         if(yargsObj.year){        
-            const response = await Tv.findOneAndUpdate(filter, updateYear)
+            const response = await Tv.findOneAndUpdate(filter, { year: yargsObj.year })
             console.log(response)
-           
         }else if (yargsObj.genre){
-            const response = await Tv.findOneAndUpdate(filter, updateGenre)
+            const response = await Tv.findOneAndUpdate(filter, { genre: yargsObj.genre })
             console.log(response)
         }else if (yargsObj.actor){
-            const response = await Tv.findOneAndUpdate(filter, updateActor)
+            const response = await Tv.findOneAndUpdate(filter, { actor: yargsObj.actor })
             console.log(response)
         }
 
