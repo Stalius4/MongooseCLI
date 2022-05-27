@@ -12,12 +12,14 @@ await addMovie ({
     year:yargsObj.year, 
     genre:yargsObj.genre, 
     rating:yargsObj.rating})
- }else if (yargsObj.list){
-    await findMovie ({title: yargsObj.title})
+//  }else if (yargsObj.list){
+//     await findMovie ({title: yargsObj.title})
  }else if (yargsObj.update){
     await updateMovie({title: yargsObj.title, year:yargsObj.year})
  }else if (yargsObj.delete){
-    deleteMovie({title:yargsObj.title})
+   await deleteMovie({title:yargsObj.title})
+}else if (yargsObj.find){
+    await findMovie(yargsObj)
  }else{
      console.log("incorrect command")
  }

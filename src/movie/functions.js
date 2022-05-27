@@ -1,3 +1,4 @@
+const yargs = require("yargs");
 const Movie = require("./model")
 
 exports.addMovie = async (movieObj) => {
@@ -9,14 +10,14 @@ exports.addMovie = async (movieObj) => {
     }
 }
 
-exports.findMovie = async (movieObj) => {
-    try {
-        const response = await Movie.findOne(movieObj);
-        console.log(response)
-    } catch (error) {
-        console.log(error)
-    }
-}
+// exports.findMovie = async (movieObj) => {
+//     try {
+//         const response = await Movie.findOne(movieObj);
+//         console.log(response)
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
 
 exports.updateMovie = async ( yargsObj) => {
     try {
@@ -37,3 +38,16 @@ exports.deleteMovie = async (movieObj) => {
         console.log(error)
     }
 };
+
+exports.findMovie = async (yargsObj ) =>{
+try {
+if(yargsObj.title){const result = await Movie.where("title").equals(yargsObj.title)
+console.log(result)
+}else if(yargsObj.genre){const result = await Movie.where("genre").equals(yargsObj.genre)
+console.log(result)
+}else if(yargsObj.actor){const result = await Movie.where("actor").equals(yargsObj.actor)
+console.log(result)}
+} catch (error) {
+    console.log(error)
+}
+}
