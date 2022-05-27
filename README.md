@@ -15,12 +15,12 @@
 4. node src/app/js --updateTv --title "name" --genre  / --actor / --year
 
 
-### What is an ODM?
+# What is an ODM?
 Object Document Mapping 
 library that allows you to pass **documents to a DBMS (MongoDB with Mongoose)** 
 allowing you to add **structure** to a **NoSQL database**.
 
-### First steps 
+# First steps 
 
 1. Create git repository.
 2. npm init -y
@@ -31,7 +31,7 @@ allowing you to add **structure** to a **NoSQL database**.
 7. npm i yargs mongoose dotenv  (dotenv let us to access .env file ), [yargs]((https://www.npmjs.com/package/yargs))
 
 
-### CRUD   (create, read, update and delete) [Documentation](https://mongoosejs.com/docs/models.html)
+# CRUD   (create, read, update and delete) [Documentation](https://mongoosejs.com/docs/models.html)
 
 1. ***Create*** create( )    
 2. ***Read*** .findOne( ) 
@@ -45,9 +45,9 @@ const result = await Movie.where("title").equals(yargsObj.title)
 
 
 
-### Task 
+# Task 
 
-**Task:**
+
 • Create a **CLI** that allows users to store movies in
 a **MongoDB database using mongoose**.
 • App must cover all **CRUD** operations.
