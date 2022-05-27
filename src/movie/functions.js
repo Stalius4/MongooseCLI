@@ -22,9 +22,21 @@ exports.addMovie = async (movieObj) => {
 exports.updateMovie = async ( yargsObj) => {
     try {
         const filter = { title: yargsObj.title };
-        const update = { year: yargsObj.year };
-        const response = await Movie.findOneAndUpdate(filter, update)
-        console.log(response)
+        const updateYear = { year: yargsObj.year };
+        const updateGenre = { genre: yargsObj.genre };
+        const updateActor = { actor: yargsObj.actor };
+        if(yargsObj.year){        
+            const response = await Movie.findOneAndUpdate(filter, updateYear)
+            console.log(response)
+           
+        }else if (yargsObj.genre){
+            const response = await Movie.findOneAndUpdate(filter, updateGenre)
+            console.log(response)
+        }else if (yargsObj.actor){
+            const response = await Movie.findOneAndUpdate(filter, updateActor)
+            console.log(response)
+        }
+
     } catch (error) {
         console.log(error)
     }

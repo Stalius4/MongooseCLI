@@ -15,7 +15,7 @@ await addMovie ({
 //  }else if (yargsObj.list){
 //     await findMovie ({title: yargsObj.title})
  }else if (yargsObj.update){
-    await updateMovie({title: yargsObj.title, year:yargsObj.year})
+    await updateMovie(yargsObj)
  }else if (yargsObj.delete){
    await deleteMovie({title:yargsObj.title})
 }else if (yargsObj.find){
