@@ -9,10 +9,10 @@
 
 ### For tv-shows 
 
-1. node/src/app.js --addTv --title "Name" --actor "Name" --year "year" --genre "drama" --rating "9.2" (add movie with actor)
-2. node/src/app.js --findTv --title  / --genre  /  --actor
-3. node src/app.js --deleteTv --title  
-4. node src/app/js --updateTv --title "name" --genre  / --actor / --year
+1. `node/src/app.js --addTv --title "Name" --actor "Name" --year "year" --genre "drama" --rating "9.2"` (add movie with actor)
+2. `node/src/app.js --findTv --title  / --genre  /  --actor`
+3. `node src/app.js --deleteTv --title`
+4. `node src/app/js --updateTv --title "name" --genre  / --actor / --year`
 
 
 # What is an ODM?
