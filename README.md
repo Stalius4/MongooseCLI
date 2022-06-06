@@ -2,10 +2,10 @@
 
 ### For movies 
 
-1. node/src/app.js --addMovie --title "Name" --actor "Name" --year "year" --genre "drama" --rating "9.2" (add movie with actor)
-2. node/src/app.js --findMovie --title  / --genre  /  --actor
-3. node src/app.js --deleteMovie --title  
-4. node src/app/js --updateMovie --title "name" --genre  / --actor / --year
+1. `node/src/app.js --addMovie --title "Name" --actor "Name" --year "year" --genre "drama" --rating "9.2"` (add movie with actor)
+2. `node/src/app.js --findMovie --title  / --genre  /  --actor`
+3. `node src/app.js --deleteMovie --title`  
+4. `node src/app/js --updateMovie --title "name" --genre  / --actor / --year`
 
 ### For tv-shows 
 
